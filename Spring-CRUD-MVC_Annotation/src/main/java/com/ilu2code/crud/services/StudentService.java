@@ -10,4 +10,6 @@ public interface StudentService {
 	public void saveStudent(Student student);
 
 	public Student getStudentDetails(int id);
+
+	public void deleteStudent(int id);
 }

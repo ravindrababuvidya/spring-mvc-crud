@@ -17,11 +17,15 @@
 			<c:url var="updatelink"  value="/student/showformupdateStudent">
 				<c:param name="studentId" value="${student.id }"></c:param>
 			</c:url>
+			<c:url var="deletelink"  value="/student/deleteStudent">
+				<c:param name="studentId" value="${student.id }"></c:param>
+			</c:url>
 			<tr>
 				<td>${student.firstname }</td>
 				<td>${student.lastname }</td>
 				<td>${student.email }</td>
-				<td ><a href="${updatelink}">Edit</a></td>
+				<td ><a href="${updatelink}">Edit</a>|<a href="${deletelink}" onclick="if(!(Confirm('Are you sure want delete student record ?'))) return false">Delete</a></td>
+				
 			</tr>
 		</c:forEach>
 	</table>

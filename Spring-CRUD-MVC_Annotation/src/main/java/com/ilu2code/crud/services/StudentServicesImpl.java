@@ -29,5 +29,10 @@ public class StudentServicesImpl implements StudentService {
 		// TODO Auto-generated method stub
 		return studentDao.getStudentDetails(id);
 	}
+	@Transactional
+	public void deleteStudent(int student) {
+		// TODO Auto-generated method stub
+		studentDao.deleteStudent(student);
+	}
 	
 }
