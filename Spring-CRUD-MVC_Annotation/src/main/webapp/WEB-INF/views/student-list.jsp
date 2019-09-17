@@ -12,13 +12,16 @@
 	<br>
 	<input type="button" name="Add Student " value="Add Student" onclick="window.location.href='showStudentForm';return false; "/>
 	<table>
-		<tr><th>First Name</th><th>Last Name</th><th>Email</th> </tr>
+		<tr><th>First Name</th><th>Last Name</th><th>Email</th> <th>Action</th> </tr>
 		<c:forEach var="student" items="${students }">
+			<c:url var="updatelink"  value="/student/showformupdateStudent">
+				<c:param name="studentId" value="${student.id }"></c:param>
+			</c:url>
 			<tr>
 				<td>${student.firstname }</td>
 				<td>${student.lastname }</td>
 				<td>${student.email }</td>
-				<td onclick="updateData()"><button>Edit</button></td>
+				<td ><a href="${updatelink}">Edit</a></td>
 			</tr>
 		</c:forEach>
 	</table>

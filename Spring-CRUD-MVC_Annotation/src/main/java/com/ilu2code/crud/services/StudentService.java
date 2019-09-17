@@ -8,4 +8,6 @@ public interface StudentService {
 	public List<Student> getAllStudentDetais();
 
 	public void saveStudent(Student student);
+
+	public Student getStudentDetails(int id);
 }

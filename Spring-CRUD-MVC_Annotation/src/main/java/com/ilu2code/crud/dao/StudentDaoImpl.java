@@ -33,8 +33,13 @@ public class StudentDaoImpl implements StudentDao {
 		
 		System.out.println("Storing Student Data");
 		
-		sessionFactory.getCurrentSession().save(student);
+		sessionFactory.getCurrentSession().saveOrUpdate(student);
 		
+	}
+
+	public Student getStudentDetails(int id) {
+		// TODO Auto-generated method stub
+		return sessionFactory.getCurrentSession().get(Student.class, id);
 	}
 
 }

@@ -18,10 +18,16 @@ public class StudentServicesImpl implements StudentService {
 	public List<Student> getAllStudentDetais(){
 		return studentDao.getAllStudents();
 	}
+	@Transactional
 	public void saveStudent(Student student) {
 		// Saving Stufent Data to Database
 		System.out.println("Saving Stufent Data to Database");
 		studentDao.saveStudentDetails(student);
+	}
+	@Transactional
+	public Student getStudentDetails(int id) {
+		// TODO Auto-generated method stub
+		return studentDao.getStudentDetails(id);
 	}
 	
 }

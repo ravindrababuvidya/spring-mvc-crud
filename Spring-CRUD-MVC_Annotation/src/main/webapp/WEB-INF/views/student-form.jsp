@@ -10,6 +10,7 @@
 <body>
 	<h1>Student Form</h1>
 	<form:form action="addStudent" modelAttribute="student" method="POST">
+		<form:hidden path="id"/>
 		First Name :<form:input path="firstname" /><br>
 		Last Name :<form:input path="lastname" /><br>
 		Email <form:input path="email" /><br>
